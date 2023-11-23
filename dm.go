@@ -201,7 +201,9 @@ func (d Dialector) BindVarTo(writer clause.Writer, stmt *gorm.Statement, v inter
 }
 
 func (d Dialector) QuoteTo(writer clause.Writer, str string) {
+	writer.WriteString(`"`)
 	writer.WriteString(str)
+	writer.WriteString(`"`)
 }
 
 var numericPlaceholder = regexp.MustCompile(`:(\d+)`)

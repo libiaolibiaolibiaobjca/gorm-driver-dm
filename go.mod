@@ -1,3 +1,4 @@
+// module github.com/libiaolibiao/gorm-driver-dm
 module github.com/nfjBill/gorm-driver-dm
 
 go 1.17
