@@ -2,6 +2,10 @@
 
 达梦数据库`gorm`驱动
 
+## fork 原因
+
+达梦数据库gorm驱动 生成的 SQL 列明使用 " 包裹，避免命中数据库关键字，譬如 DELETE
+
 ## Quick Start
 
 ```go
@@ -28,3 +32,6 @@ db, err := gorm.Open(dm.Open(dsn), &gorm.Config{})
 
 - 超过4096长度字符串，需要使用`dmSchema.Clob`，不超过使用`string`即可
 - 列名不要使用达梦关键字，否则会出现错误
+
+##  replace 方法
+replace github.com/nfjBill/gorm-driver-dm v1.0.1 => github.com/libiaolibiaolibiaobjca/gorm-driver-dm
