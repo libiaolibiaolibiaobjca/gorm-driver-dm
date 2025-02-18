@@ -4,8 +4,7 @@ import (
 	"database/sql/driver"
 	"errors"
 	"fmt"
-
-	"github.com/nfjBill/gorm-driver-dm/dmr"
+	"gitee.com/chunanyong/dm"
 )
 
 type Clob string
@@ -19,8 +18,8 @@ func (clob Clob) Value() (driver.Value, error) {
 
 func (clob *Clob) Scan(v interface{}) error {
 	switch v.(type) {
-	case *dmr.DmClob:
-		tmp := v.(*dmr.DmClob)
+	case *dm.DmClob:
+		tmp := v.(*dm.DmClob)
 		le, err := tmp.GetLength()
 		if err != nil {
 			return errors.New(fmt.Sprint("err：", err))

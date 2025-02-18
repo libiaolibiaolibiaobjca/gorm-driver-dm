@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	_ "github.com/nfjBill/gorm-driver-dm/dmr"
+	_ "gitee.com/chunanyong/dm"
 	"github.com/thoas/go-funk"
 	"gorm.io/gorm"
 	"gorm.io/gorm/callbacks"
